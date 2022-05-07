@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Screen Color</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    #app {
+      width: 100vw;
+      height: 100vh;
+      background-color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+
+  </div>
+
+  <script>
+    const colors = [
+      '#27ae60', '#2980b9', '#8e44ad', '#e67e22', '#e74c3c', '#ecf0f1', '#2c3e50', '#d35400', '#c0392b', '#000'
+    ]
+
+    const app = document.getElementById('app')
+    app.addEventListener('click', (event) => {
+      console.log('click')
+
+      const rand = Math.floor(Math.random() * colors.length)
+      app.style.backgroundColor = colors[rand]
+    })
+  </script>
+</body>
+
+</html>
